@@ -1,0 +1,83 @@
+When planning a migration to AWS, gathering and analyzing discovery and assessment data is crucial for successful execution. This data helps you evaluate your current environment, understand dependencies, and design an optimal cloud architecture. Here's a breakdown of useful discovery and assessment data for a future AWS migration:
+
+---
+
+### **1. Infrastructure Inventory**
+   - **Servers:** Details like operating systems, CPU, RAM, storage, and hypervisor type (e.g., VMware, Hyper-V).
+   - **Databases:** Type (e.g., SQL Server, Oracle, PostgreSQL), version, size, configuration, and IOPS requirements.
+   - **Storage:** On-premises storage systems, types of storage (block, file, or object), and associated data volumes.
+   - **Network:** Current network topology, IP address ranges, bandwidth utilization, firewall rules, and VPNs.
+   - **End-of-Life Hardware:** Identify servers or infrastructure approaching the end of support.
+
+---
+
+### **2. Application Inventory**
+   - **List of Applications:** A catalog of all applications, their versions, and functionalities.
+   - **Dependencies:** Application-to-application and application-to-database dependencies.
+   - **Criticality:** Business impact analysis to classify applications as mission-critical, business-critical, or non-critical.
+   - **Usage Patterns:** Workload usage over time (daily, weekly, seasonal peaks).
+
+---
+
+### **3. Performance Metrics**
+   - **Resource Utilization:** Current CPU, memory, and disk utilization trends.
+   - **Storage I/O:** Throughput and latency for current storage solutions.
+   - **Network Performance:** Bandwidth consumption and latency requirements.
+   - **Scalability Needs:** Applications with unpredictable or spiky usage patterns.
+
+---
+
+### **4. Licensing and Compliance**
+   - **Software Licenses:** Current software licensing terms for databases, OS, and applications.
+   - **Compliance Requirements:** Industry-specific requirements like HIPAA, PCI-DSS, or GDPR that might affect architecture and AWS region choice.
+
+---
+
+### **5. Security Posture**
+   - **User Access:** Roles, privileges, and authentication mechanisms currently in place.
+   - **Existing Security Tools:** Firewalls, IDS/IPS, antivirus, and encryption standards.
+   - **Compliance Audits:** Review results of recent security audits.
+
+---
+
+### **6. Business Requirements**
+   - **Downtime Tolerance:** Acceptable downtime for applications during migration (RTO and RPO goals).
+   - **SLAs:** Required SLAs for performance, uptime, and recovery.
+   - **Cost Constraints:** Budget constraints and goals for cloud adoption.
+
+---
+
+### **7. Migration Readiness**
+   - **Virtualization:** How virtualized your workloads are (e.g., VMware VMs, bare-metal servers).
+   - **Containerization:** Applications already using containers and orchestrators like Kubernetes.
+   - **DevOps Practices:** Level of automation and CI/CD pipelines in use.
+
+---
+
+### **8. Dependency Mapping**
+   - **Application Dependencies:** Relationships between servers, applications, and databases.
+   - **Shared Resources:** Identify shared services like authentication systems (e.g., LDAP, AD).
+   - **Interconnected Workloads:** Cross-system interactions to avoid bottlenecks during migration.
+
+---
+
+### **9. Cost Analysis**
+   - **Current Costs:** Cost of running workloads on-premises (hardware, power, cooling, maintenance, etc.).
+   - **Projected Cloud Costs:** Estimated costs for AWS services based on similar workloads.
+
+---
+
+### **10. Tools and Automation**
+   - **Discovery Tools:** Tools like AWS Application Discovery Service, AWS Migration Hub, or third-party tools like CloudEndure, Device42, or Movere.
+   - **Assessment Tools:** AWS Migration Evaluator (formerly TSO Logic) for cost modeling and resource mapping.
+
+---
+
+### **Deliverables from Discovery & Assessment**
+   - **Comprehensive Inventory Report:** Full details of all on-premises assets.
+   - **Migration Plan:** High-level roadmap for the migration, including phased transitions.
+   - **AWS Target Architecture:** Design of the AWS environment based on gathered data.
+   - **Migration Strategy:** Choose between rehost (lift-and-shift), refactor, replatform, retire, or retain.
+   - **Cost and Performance Analysis:** Optimized AWS resource sizing and pricing estimates.
+
+By collecting and analyzing these categories of data, you can ensure a smooth transition to AWS while minimizing risks and optimizing the cloud environment.
